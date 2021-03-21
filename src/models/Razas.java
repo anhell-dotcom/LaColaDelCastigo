@@ -39,7 +39,7 @@ public class Razas{
 		this.edad = edad;
 	}
 
-	// ToString
+	// El ToString
 	@Override
 	public String toString() {
 		return "Razas [tipoRaza=" + tipoRaza + ", nombreRelevante=" + nombreRelevante + ", " + "edad=" + edad + "]";
