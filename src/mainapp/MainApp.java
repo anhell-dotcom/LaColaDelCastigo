@@ -1,6 +1,7 @@
 package mainapp;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
@@ -15,7 +16,7 @@ public class MainApp {
 
 		ColaDelCastigo<Razas> colita = new ColaDelCastigo<Razas>();
 
-		List<Razas> lista = new ArrayList<Razas>();
+		List<Razas> lista = new ArrayList<Razas>(new ComparadorEdad());
 
 		System.out.println(
 				"Estas son razas de la Tierra Media creadas por J.R.R. Tolkien en el El senyor de los anillos");
@@ -66,9 +67,9 @@ public class MainApp {
 
 		// Lambda para probar la coleccion. Ordena primero por Tipo de raza y
 		// luego por nombre
-		Comparator<Razas> groupByComparator = Comparator.comparing(Razas::getTipoRaza)
-				.thenComparing(Razas::getNombreRelevante);
-		lista.sort(groupByComparator);
+		//Comparator<Razas> groupByComparator = Comparator.comparing(Razas::getTipoRaza)
+			//	.thenComparing(Razas::getNombreRelevante);
+		//lista.sort(groupByComparator);
 
 		// Muestra los elementos de la coleccion
 		lista.forEach(System.out::println);

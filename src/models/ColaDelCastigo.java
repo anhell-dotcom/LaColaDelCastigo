@@ -12,8 +12,7 @@ public class ColaDelCastigo<E extends Razas> {
 	 * Metodo para insertar Razas en la coleccion. Verifica si hay menos de 10
 	 * elementos, en caso de intentar meter 11 aparece el mensaje de error. Tambien
 	 * verifica que los parametros que se inserten no sean nulos, en cuyo caso
-	 * tambien muestra mensaje de error. Tambien ordena la coleccion (quizas hace
-	 * demasiadas cosas para un solo metodo)
+	 * tambien muestra mensaje de error. 
 	 * 
 	 * @param lista  Coleccion de tipos de Razas
 	 * @param raza   Nombre de la raza
@@ -28,14 +27,8 @@ public class ColaDelCastigo<E extends Razas> {
 			if (raza == null || nombre == null) {
 				throw new LlevateTuNullDeAquiException("No se pueden insertar valores nulos!!!");
 			}
-			Comparator<Razas> groupByComparator = Comparator.comparing(Razas::getTipoRaza)
-					.thenComparing(Razas::getNombreRelevante);
-			lista.sort(groupByComparator);
 			return lista.add(new Razas(raza, nombre, edad));
 		} else {
-			Comparator<Razas> groupByComparator = Comparator.comparing(Razas::getTipoRaza)
-					.thenComparing(Razas::getNombreRelevante);
-			lista.sort(groupByComparator);
 			throw new ColaExceededSizeException("No se pueden insertar mas de 10 elementos!!");
 		}
 	}

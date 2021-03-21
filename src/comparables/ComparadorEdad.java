@@ -13,5 +13,6 @@ public class ComparadorEdad implements Comparator<Razas>{
 		else if (r1.getEdad() > r2.getEdad())
 			return -1;
 		return 0;       
+		
 	}
 }
