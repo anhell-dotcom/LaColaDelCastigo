@@ -41,9 +41,8 @@ public class ColaDelCastigo<E extends Razas> {
 	}
 
 	/**
-	 * El metodo Clear sirve para eliminar los objetos de la coleccion. Si el
-	 * tamanyo de la coleccion es 10 (el limite maximo) salta una excepcion de que
-	 * no se puede eliminar nada
+	 * Si el tamanyo de la coleccion es 10 (el limite maximo) salta una excepcion de
+	 * que no se puede eliminar nada. Si es menor, vacia la coleccion
 	 * 
 	 * @param lista Nombre de la coleccion
 	 * @throws ElementBlockedException
@@ -51,6 +50,8 @@ public class ColaDelCastigo<E extends Razas> {
 	public void Clear(List<Razas> lista) throws ElementBlockedException {
 		if (lista.size() == 10) {
 			throw new ElementBlockedException("La coleccion ya esta llena, no se puede eliminar nada");
+		} else if(lista.size() > 0 || lista.size() < 10){
+			lista.clear();
 		}
 	}
 }

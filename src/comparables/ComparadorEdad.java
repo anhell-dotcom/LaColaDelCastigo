@@ -4,7 +4,7 @@ import java.util.Comparator;
 import models.Razas;
 
 /**
- * Metodo que ordena por edades
+ * Comparador que ordena por edades
  */
 public class ComparadorEdad implements Comparator<Razas>{
 	public int compare(Razas r1, Razas r2) {

@@ -17,10 +17,11 @@ public class MainApp {
 
 		List<Razas> lista = new ArrayList<Razas>();
 
-		// Estas son razas de la Tierra Media creadas por J.R.R. Tolkien en el "El
-		// senyor de los anillos"
-		// (algunas las toma prestadas de la mitologia nordica). Las edades estan
-		// puestas a ojo
+		System.out.println(
+				"Estas son razas de la Tierra Media creadas por J.R.R. Tolkien en el El senyor de los anillos");
+		System.out.println("(aunque algunas las toma prestadas de la mitologia nordica). ");
+		System.out.println("Las edades estan puestas a ojo");
+
 		Razas r1 = new Razas("Maiar", "Gandalf", 997);
 		Razas r2 = new Razas("Elfo Sindar", "Legolas", 234);
 		Razas r3 = new Razas("MedioElfo", "Elrond", 834);
@@ -31,16 +32,16 @@ public class MainApp {
 		Razas r8 = new Razas("Maiar", "Sauron", 934);
 		Razas r9 = new Razas("Desconocido", "Tom Bombadil", 6639);
 
-		// insercion de objeto para pruebas
+		// PRUEBAS insercion de otra Raza
 		// try {
-		// colita.AnyadirRaza(lista, "Hobbit", "Samsagaz", 0);
+		// colita.AnyadirRaza(lista, "Hobbit", "Samsagaz", 37);
 		// } catch (ColaExceededSizeException e) {
 		// e.printStackTrace();
 		// }
 
-		// insercion de otro objeto para pruebas
+		// PRUEBAS: insercion de otra Raza
 		// try {
-		// colita.AnyadirRaza(lista, "MedioElfo", "Arwen", 300);
+		// colita.AnyadirRaza(lista, "MedioElfo", "Arwen", 390);
 		// } catch (ColaExceededSizeException e) {
 		// e.printStackTrace();
 
@@ -58,13 +59,12 @@ public class MainApp {
 		Collections.sort(lista, new ComparadorEdad());
 
 		// Verifica el tamaño de la coleccion
-		System.out.println("\nEl tamanyo de la lista es : " + lista.size());
-		System.out.println();
+		System.out.println("\nEl tamanyo de la lista es : " + lista.size() + "\n");
 
-		// probando el metodo Clear
+		// PRUEBAS: el metodo Clear
 		// colita.Clear(lista);
 
-		// Comparador Lambda para probar la coleccion. Ordena primero por Tipo de raza y
+		// Lambda para probar la coleccion. Ordena primero por Tipo de raza y
 		// luego por nombre
 		Comparator<Razas> groupByComparator = Comparator.comparing(Razas::getTipoRaza)
 				.thenComparing(Razas::getNombreRelevante);

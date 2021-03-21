@@ -2,7 +2,7 @@ package excepciones;
 
 public class LlevateTuNullDeAquiException extends NullPointerException{
 	
-	// constructor sin parametro
+	// constructor vacio
 	public LlevateTuNullDeAquiException() {
 	}
 	
